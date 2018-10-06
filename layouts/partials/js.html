@@ -12,11 +12,40 @@
 <!-- custom -->
 {{ range .Site.Params.js }} <script src="{{ . | absURL }}"></script> {{ end }}
 
-<!-- jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- This is the JavaScript (page duty) that is responsible for the navigation
+Why is this not in a seperate js file? Initially, Hugo was giving me errors when attempting it this way.
+So this works & it's small. -->
+<script async>
+    (pageDuty => {
+        
+        const sideNav = document.getElementById('sideNav');
+        const closeNavBtn = document.querySelector('.closeBtn');
+        const toggleNavBtn = document.querySelector('.toggleNav');
+        const pageOverlay = document.querySelector('.page__overlay');
+        const relatedElement = document.querySelector('.related');
+        const h4RelatedHeader = document.querySelector('.related-header');
 
-<!-- bootstrap -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        // Nav listeners
+        closeNavBtn.addEventListener('click', toggleNav);
+        toggleNavBtn.addEventListener('click', toggleNav);
+        pageOverlay.addEventListener('click', toggleNav);
+        // Nav funtion
+        function toggleNav() {
+            sideNav.classList.toggle('open');
+        };
 
-<!-- dismiss expanded navigation bar with click -->
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        // close nav menu when link is clicked
+        let navItems = document.querySelectorAll(".nav__item");
+        for (var i = 0; i < navItems.length; i++) {
+            navItems[i].addEventListener('click', function (event) {
+                toggleNav();
+            });
+        }
+
+        // hide h4 'related' if no related posts found
+        if (relatedElement.childElementCount == 0) {
+            h4RelatedHeader.classList.toggle('hidden');
+        }
+
+    })();
+</script>

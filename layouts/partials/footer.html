@@ -4,43 +4,6 @@
 
 </footer>
 
-<script async>
-    // This is the page duty & responsible for the navigation
-    // Why is this not in a seperate js file? Initially, Hugo was giving me errors when attempting it this way.
-    (pageDuty => {
-        
-        const sideNav = document.getElementById('sideNav');
-        const closeNavBtn = document.querySelector('.closeBtn');
-        const toggleNavBtn = document.querySelector('.toggleNav');
-        const pageOverlay = document.querySelector('.page__overlay');
-        const relatedElement = document.querySelector('.related');
-        const h4RelatedHeader = document.querySelector('.related-header');
-
-        // Nav listeners
-        closeNavBtn.addEventListener('click', toggleNav);
-        toggleNavBtn.addEventListener('click', toggleNav);
-        pageOverlay.addEventListener('click', toggleNav);
-        // Nav funtion
-        function toggleNav() {
-            sideNav.classList.toggle('open');
-        };
-
-        // close nav menu when link is clicked
-        let navItems = document.querySelectorAll(".nav__item");
-        for (var i = 0; i < navItems.length; i++) {
-            navItems[i].addEventListener('click', function (event) {
-                toggleNav();
-            });
-        }
-
-        // hide h4 'related' if no related posts found
-        if (relatedElement.childElementCount == 0) {
-            h4RelatedHeader.classList.toggle('hidden');
-        }
-
-    })();
-</script>
-
 </body>
 
 </html>
