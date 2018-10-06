@@ -1,7 +1,7 @@
 # Minimal-esque
 #### A dark minimal-esque theme for Hugo
 
-Personal blog theme powered by [Hugo](https://gohugo.io) using the [Minimal](https://github.com/calintat/minimal) theme as a boilerplate.
+Personal blog theme powered by [Hugo](https://gohugo.io) using the forked [Minimal](https://github.com/calintat/minimal) theme as a boilerplate.
 A live demo is available [here](https://themes.gohugo.io/theme/minimal/).
 
 ## Installation
@@ -36,7 +36,9 @@ Now edit this file and add your own information. Note that some fields can be om
 
 I recommend you use the theme's archetypes so now delete your site's `archetypes/default.md`.
 
-Customization options might be revisted in the future.
+### Customization
+
+Options might be revisted in the future.
 
 <!--## Features
 
