@@ -2,28 +2,31 @@
 
 <main>
 
-    {{ partial "list-item" . }}
-
-    <br> <div class="text-justify">{{ .Content }}</div>
-
-    <!-- related posts with the same tags -->
-    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
-
-    {{ if $related }}
-
-        <h4 class="page-header">Related</h4>
-
-        {{ range $related }} {{ partial "list-item" . }} {{ end }}
-
-    {{ end }}
-
-    {{ if and .Site.DisqusShortname (not .Params.disableComments) }}
-
+    <div class="inner">
+        {{ partial "list-item" . }}
+        
+        <article class="item-full-post">{{ .Content }}</article>
+        
+        <h4 class="related-header">Related</h4>
+        <div class="latest related">
+        <!-- related posts with the same tags -->
+        {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+        
+        {{ if $related }}
+        
+        {{ range $related }} {{ partial "list-card" . }} {{ end }}
+        
+        {{ end }}
+        
+        {{ if and .Site.DisqusShortname (not .Params.disableComments) }}
+        </div>
+        
         <h4 class="page-header">Comments</h4>
-
+        
         {{ template "_internal/disqus.html" . }}
-
-    {{ end }}
+        
+        {{ end }}
+    </div>
 
 </main>
 
