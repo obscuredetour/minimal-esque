@@ -2,7 +2,15 @@
 #### A dark minimal-esque theme for Hugo
 
 Personal blog theme powered by [Hugo](https://gohugo.io) using the [Minimal](https://github.com/calintat/minimal) theme as a boilerplate.
-A live demo is available [here](https://themes.gohugo.io/theme/minimal/).
+A live demo is should hopefully be available soon.
+<!-- A live demo is available [here](https://themes.gohugo.io/theme/minimal/). -->
+
+## Changes
+Here are the most notable changes
+* Removal of Bootstrap, jQuery and all their dependencies. Yet still fully responsive.
+* Article card layout built using Flexbox only
+* Navigation mechanics built using only vanilla JavaScript
+
 
 ## Installation
 
