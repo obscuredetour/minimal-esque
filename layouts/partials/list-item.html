@@ -1,4 +1,4 @@
-<div class="item">
+<article class="item {{ .Params.noImage }}">
 
     {{ $.Scratch.Set "link" .RelPermalink }}
     {{ with .Params.repo }}
@@ -16,10 +16,12 @@
     {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
     {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
 
-    <h4><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a></h4>
-    <h5>{{ $.Scratch.Get "subtitle" }}</h5>
+
+    <p class="item-date">{{ .Date.Format (.Site.Params.dateFormat | default "2 January 2006") }}</p>
     {{ range .Params.tags }}
     <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><kbd class="item-tag">{{ . }}</kbd></a>
     {{ end }}
+    <h1>{{ .Title }}</h1>
+    <figure class="item-full-image" style="background-image: url({{ .Params.image }})"></figure>
 
-</div>
+</article>

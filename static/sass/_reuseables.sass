@@ -1,0 +1,279 @@
+//reuseables
+.inner
+  max-width: 50rem
+  margin: 0 auto
+  background: transparent
+  
+.flex-container
+  display: flex
+  flex-direction: column
+  > *
+    flex: 1
+    margin: 0 0 1rem 0
+    &:last-child
+      margin-bottom: 0
+  & .image.fit
+    padding-right: 0
+  &.alt
+    flex-direction: row
+
+@media screen and (min-width: 769px)
+  // .h-alt
+  //   margin-bottom: 3rem
+  .inner
+    padding: 1rem 1.5rem
+  .flex-container
+    flex-direction: row
+    > *
+      margin-right: 1rem
+      margin-bottom: 0
+      &:last-child
+        margin-right: 0
+    & .image.fit
+      padding-right: 1rem
+    &.alt
+      flex-direction: column
+      > *
+        margin-right: 0
+
+.subtitle
+  margin: -1rem auto 1rem auto
+  max-width: unset
+  padding: 0
+  color: transparentize($dark, 0.35)
+
+.sub-heading:before
+  content: ""
+  display: block
+  //background: transparentize($green, 0.5)
+  //height: 2px
+  border-top: 4px dotted transparentize($green, 0.5)
+  width: 75%
+  margin-bottom: 1rem
+  margin-top: -1rem
+
+//images
+.image
+  border: 0
+  padding: 0
+  margin: 0 auto
+  text-align: center
+  display: inline-block
+  position: relative
+  //z-index: -1
+  & img
+    display: block
+    border-radius: 3px
+  &.left, &.right
+    max-width: 35%
+    & img
+      width: 100%
+      border-radius: 3px
+  &.left
+    float: left
+    padding: 0 1rem 0.5rem 0
+    top: 0.25rem
+  &.right
+    float: right
+    padding: 0 0 0.5rem 1rem
+    top: 0.25rem
+  &.scale
+    display: block
+    max-width: 60%
+    margin-bottom: 1rem
+    height: auto
+  &.fit
+    display: block
+    margin: 0 0 1.5rem 0
+    width: 100%
+    & img
+      width: 100%
+      border-radius: 2px
+
+.accessible-menu
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  bottom: 1.25rem
+
+dl
+  margin: 0 0 1.25rem 0
+  & dt
+    display: block
+    font-weight: 600
+    margin: 0 0 1rem 0
+  & dd
+    margin-left: 1.25rem
+
+blockquote
+  background: lighten($darkest, 20%)
+  color: transparentize($darkest, 0.15)
+  font-style: italic
+  font-size: 1.3rem
+  line-height: 1.5
+  margin: 2rem auto
+  padding: 1rem 2rem 1rem 3.5rem
+  border-left: solid 6px $link-color
+  position: relative
+  p
+    margin: 0 !important
+  &:before
+    font-family: Arial, sans-serif
+    content: "\201C"
+    color: $link-color
+    font-size: 4rem
+    position: absolute
+    left: 10px
+    top: -0.5rem
+  &:after
+    content: ''
+  & span
+    display: block
+    color: $text-color
+    font-style: normal
+    font-weight: 600
+    margin-top: 1rem
+//box
+.box
+  padding: 1rem
+  border-radius: 2px
+  border: solid 1px transparentize($gray, 0.5)
+  p 
+    margin: 0
+
+//table
+.table-wrapper
+  overflow-x: auto
+  -webkit-overflow-scrolling: touch
+table
+  margin: 0 0 1.5rem 0
+  width: 100%
+  display: block
+  border-collapse: separate
+  border-spacing: 0
+  & tbody tr
+    border: solid 1px transparentize($dark, 0.75)
+    border-left: 0
+    border-right: 0
+    &:nth-child(2n + 1)
+      background-color: transparentize($dark, 0.95)
+  & td
+    padding: 1rem
+  & th
+    color: transparentize($dark, 0.2)
+    font-size: 0.95rem
+    font-weight: 600
+    text-align: left
+    padding: 0 1rem
+  & thead
+    border-bottom: solid 2px transparentize($dark, 0.75)
+  & tfoot
+    border-top: solid 2px transparentize($dark, 0.75)
+  &.alt
+    border-collapse: separate
+    border-spacing: 0
+    & tbody tr
+      border: solid 1px transparentize($dark, 0.75)
+      & td
+        border-left: solid 1px transparentize($dark, 0.75)
+        border-bottom: solid 1px transparentize($dark, 0.75)
+        &:last-child
+          border-right: solid 1px transparentize($dark, 0.75)
+      &:first-child td
+        border-top: solid 1px transparentize($dark, 0.75)
+      &:last-child td
+        border-bottom: solid 1px transparentize($dark, 0.75)
+    & thead
+      border-bottom: 0
+    & tfoot
+      border-top: 0   
+
+//list
+// ol, ul
+//   color: transparentize($dark, 0.2)
+
+ol
+  list-style-type: decimal
+  margin: 0 0 1rem 0
+  padding-left: 1.5rem
+  li
+    padding-left: 0.5rem
+
+ul
+  list-style-type: disc
+  margin: 0 0 1rem 0
+  padding-left: 0.75rem
+  li
+    padding-left: 0.25rem
+  &.actions
+    margin: 0 0 1rem 0
+    list-style: none
+    cursor: default
+    padding-left: 0
+    &.vertical
+      li
+        display: block
+        margin-bottom: 1rem
+        &:last-child
+          margin-bottom: 0
+      &.small
+        li
+          margin-bottom: 0.5rem
+          &:last-child
+            margin-bottom: 0
+    li
+      display: inline-block
+      padding: 0 1rem 0 0
+      vertical-align: middle
+      &:last-child
+        padding-right: 0
+
+//button
+.button
+  background: $green
+  display: inline-block
+  border-radius: 2px
+  color: white
+  text-decoration: none
+  font-size: 0.9rem
+  letter-spacing: 0.05rem
+  // text-transform: uppercase
+  //font-weight: 500
+  border: 2px solid transparent
+  cursor: pointer
+  transition: all 0.3s ease
+  padding: 0.75rem
+  outline: 0
+  &.disabled
+    -webkit-pointer-events: none
+    -ms-pointer-events: none
+    pointer-events: none
+    opacity: 0.5
+  &.small
+    line-height: 1.2rem
+    font-weight: 400
+    font-size: 0.85rem
+    padding: 0.5rem 0.75rem
+    letter-spacing: 0.05rem
+  &.white
+    background: white
+  &:hover
+    background: lighten($green, 10%)
+    box-shadow: none
+  &:active
+    background: lighten($green, 15%)
+  &:focus
+    background: transparentize(white, 0.25)
+    //border: 2px solid transparentize($gray, 0.5)
+  &.secondary, &.tertiary
+    background: transparent
+    color: $dark !important
+    border: 2px solid transparentize($darkish, 0.75)
+    &:hover
+      background: transparentize($gray, 0.65)!important
+      //border-color: transparent
+    &.tertiary
+      border: 0
+
+// ------------
+// Animations

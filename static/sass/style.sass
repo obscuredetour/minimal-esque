@@ -1,0 +1,289 @@
+///import
+
+@import '_variables'
+@import '_reset'
+@import '_reuseables'
+@import '_nav'
+
+::selection
+  background: #3A584B
+
+code
+  background-color: $darkest
+  color: lighten($link-color, 15%)
+  font-family: "SFMono-Regular", Consolas, "Source Code Pro", "Fira Code", "Liberation Mono", Menlo, Courier, monospace
+
+main
+  margin: 4.5rem auto 0 auto
+  z-index: 100
+  flex-grow: 1
+  flex: 1 0 auto
+  .intro
+    margin-top: -10rem
+    text-align: center
+    .intro-subtitle, .intro-title
+      margin-left: auto
+      margin-right: auto
+    .intro-subtitle
+      font-size: 1.05rem
+      padding: 1rem 0 0 0
+
+.banner-title
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  transform: translateY(-20rem)
+  z-index: 3
+  h1
+    font-size: 3rem
+  h2, p
+    color: lighten($gray, 7%)
+
+.item-full-image.banner-image
+  position: relative
+  height: 500px
+  width: 100%
+  margin: 0 auto
+  border-radius: 0
+  background-color: $darkest
+  background-image: url(/images/arrows-silverthorne-cover.jpg)
+  &:after, *:before
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 2
+    display: block
+  &:before
+    bottom: 0
+    background: rgba(0,0,0,.5)
+  &:after
+    bottom: auto
+    background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.25))
+  &.four-oh-four
+    background-image: linear-gradient( 135deg, $link-color 10%, $green 100%)
+
+/// list-item.html
+/// THIS IS A POST
+//////////////////
+
+//.item = headline
+.item
+  text-align: center
+  margin: 0 auto
+  padding-top: 3rem
+  h1
+    margin-top: 1rem
+    font-size: 2.5rem
+    margin-bottom: 2rem
+  .item-date
+    display: inline-block
+    margin-bottom: 0
+    &:after
+      content: '/'
+      display: inline-block
+      margin: 0 0 0 0.6rem
+    & h1, & .item-subtitle
+      text-align: center
+.item-subtitle
+  padding-bottom: 1rem
+
+.item-tag
+  border-radius: 3px
+
+.item-full-image
+  margin: 0 -20vw -265px
+  height: 800px
+  background: 50% $darker
+  background-size: cover
+  border-radius: 3px
+
+.item-full-post
+  position: relative
+  margin: 0 auto 2rem auto
+  padding: 1rem 4rem 2rem 4rem
+  min-height: 230px
+  line-height: 1.6em
+  background: $darker
+  p:first-of-type
+    margin-top: 2rem
+
+.related-header.hidden
+  display: none
+
+//Latest//
+
+.latest 
+  position: relative
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -20px
+  padding: 0
+
+/// item-card.html
+/// These are the article cards
+.item-card
+  flex: 1 1 300px
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  margin: 0 20px 40px
+  min-height: 300px
+  background: $darker 50%
+  background-size: cover
+  backface-visibility: hidden
+  font-smoothing: antialiased
+  border-radius: 3px
+  padding: 0
+  box-shadow: 1px 2px 4px rgba(29, 29, 29, 0.04), 1px 2px 4px rgba(29, 29, 29, 0.07)
+  transition: all .5s ease
+  &:hover
+    box-shadow: 2px 4px 6px rgba(29, 29, 29, 0.1), 2px 4px 6px rgba(29, 29, 29, 0.1)
+    transition: all 0.3s ease
+    transform: translateY(-1px)
+  &.no-image
+    border-top: solid 8px $green
+
+.no-image:not(.item)
+  border-top: solid 8px $green
+.no-image
+  .item-card-image-link, .item-full-image
+    display: none
+
+.item-card-content
+  text-align: left
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 30px 40px 0
+  h3, h4
+    margin-bottom: 0
+  .item-date, .item-read-time
+    display: inline-block
+    font-size: 80%
+    color: transparentize($gray, 0.4)
+    margin-top: -0.5rem
+    margin-bottom: 1.5rem
+    &:before
+      content: ''
+      display: block
+      margin: 0.5rem 0 0 0
+    &:after
+      content: ''
+      margin: 0
+
+      
+
+.item-card:nth-child(6n+1):not(.no-image) .item-card-image-link 
+  position: relative
+  flex: 1 1 auto
+  border-radius: 3px 0 0 3px
+.item-card:nth-child(6n+1):not(.no-image) .item-card-image
+  border-radius: 3px 0 0 3px
+
+.item-card-image-link 
+  position: relative
+  display: block
+  overflow: hidden
+  border-radius: 3px 3px 0 0
+
+.item-card-image 
+  width: auto
+  height: 200px
+  background: 50% no-repeat $darkest
+  background-size: cover
+
+.item-card-tags
+  margin-bottom: 2rem
+.item-tag
+  color: $link-color
+  font-size: 87%
+  padding: 0.25rem
+  transition: all 0.3s ease-in-out
+  &:hover 
+    border-bottom: 0
+    background-color: $dark
+
+/// Paginator
+.pages
+  margin: 0 auto
+  text-align: center
+.pages-icon
+  &:hover .pages-icon-path
+    fill: $link-color-hover
+
+/// FOOTER
+footer, footer p
+  margin: 0 auto
+  text-align: center
+  color: $darkish
+footer p
+  padding: 2rem 0
+
+/// MEDIA QUERIES
+
+@media (min-width: 795px)
+  .item-card:nth-child(6n+1):not(.no-image)
+    flex: 1 1 100%
+    flex-direction: row
+  .related .item-card:nth-child(6n+1):not(.no-image)
+    flex: 1 1 300px
+    flex-direction: column
+  .item-card:nth-child(6n+1):not(.no-image) .item-card-image
+    position: absolute
+    width: 100%
+    height: 100%
+  .related .item-card:nth-child(6n+1):not(.no-image) .item-card-image
+    position: initial
+    width: initial
+    height: 200px
+  .item-card:nth-child(6n+1):not(.no-image) .item-card-content
+    flex: 0 1 357px
+
+@media (max-width: 650px)
+  .item-card
+    margin: 0 20px 5vw
+
+@media screen and (max-width: 1170px)
+  .item-full-post
+    padding: 5vw 7vw 2rem
+  .item-full-image
+    margin: 0 -10vw -100px
+    height: 600px
+    border-radius: 0
+@media screen and (max-width: 800px)
+  main
+    .intro-title, .intro-subtitle
+      padding: 0 1rem
+  .item-full-image
+    margin: 0 -25px -100px
+    height: 400px
+    border-radius: 0
+  .latest
+    margin: 0
+
+@media screen and (max-width: 500px)
+  main .intro
+    margin-top: -9rem
+  .banner-title
+    transform: translateY(-15rem)
+    & h1
+      font-size: 1.8rem
+    & h2
+      font-size: 1.3rem
+  .item-full-image.banner-image
+    height: 300px
+  .item-full-image
+    margin-bottom: 4vw
+    height: 350px
+  // .item-full-post
+  //   padding: 0 1.5rem 0 1.5rem
+
+

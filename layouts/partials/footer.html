@@ -1,9 +1,45 @@
-        <footer>
+<footer>
 
-            <p class="copyright text-muted">{{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)" | markdownify }}</p>
+    <p class="copyright">2018 {{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io) and a modified version of [Minimal](https://github.com/calintat/minimal) called [minimal-esque](https://github.com/obscuredetour/minimal-esque)" | markdownify }}</p>
 
-        </footer>
-       
-    </body>
+</footer>
+
+<script async>
+    
+    (pageDuty => {
+        
+        const sideNav = document.getElementById('sideNav');
+        const closeNavBtn = document.querySelector('.closeBtn');
+        const toggleNavBtn = document.querySelector('.toggleNav');
+        const pageOverlay = document.querySelector('.page__overlay');
+        const relatedElement = document.querySelector('.related');
+        const h4RelatedHeader = document.querySelector('.related-header');
+
+        // Nav listeners
+        closeNavBtn.addEventListener('click', toggleNav);
+        toggleNavBtn.addEventListener('click', toggleNav);
+        pageOverlay.addEventListener('click', toggleNav);
+        // Nav funtion
+        function toggleNav() {
+            sideNav.classList.toggle('open');
+        };
+
+        // close nav menu when link is clicked
+        let navItems = document.querySelectorAll(".nav__item");
+        for (var i = 0; i < navItems.length; i++) {
+            navItems[i].addEventListener('click', function (event) {
+                toggleNav();
+            });
+        }
+
+        // hide h4 'related' if nothing exists
+        if (relatedElement.childElementCount == 0) {
+            h4RelatedHeader.classList.toggle('hidden');
+        }
+
+    })();
+</script>
+
+</body>
 
 </html>

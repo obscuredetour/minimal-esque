@@ -36,42 +36,42 @@
 
     <body>
         {{ partial "body-open" . }}
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <header class="nav-wrapper">
+            <nav class="nav" role="navigation">
+                <span class="toggleNav">
+                <svg class="svg-hamburger" viewBox="0 0 1536 1280" xmlns="http://www.w3.org/2000/svg">
+                    <path class="svg-hamburger-path" d="M1536 1088v128q0 26-19 45t-45 19H64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 704V576q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 192V64q0-26 19-45T64 0h1408q26 0 45 19t19 45z"
+                    fill="rgba(226, 241, 236, 20.85)" />
+                </svg>
+                </span> 
+                <a class="nav__logo" href="/">
+                    <img class="logo logo-small" id="logo" src="/images/logo-obj.svg" alt="Logo">
+                </a>
 
-            <div class="container">
-
-                <div class="navbar-header">
-
-                    <a class="navbar-brand visible-xs" href="#">{{ .Title }}</a>
-
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                </div>
-
-                <div class="collapse navbar-collapse">
-
+                
+                <ul class="nav__list" id="sideNav">
                     {{ if .Site.Menus.main }}
-                        <ul class="nav navbar-nav">
-                            {{ range sort .Site.Menus.main }}
-                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                            {{ end }}
-                        </ul>
+                    <div class="nav__list-left">
+                        <a class="closeBtn">
+                            <svg class="svg-close" viewBox="0 0 1188 1188" xmlns="http://www.w3.org/2000/svg">
+                                <path class="svg-close-path" d="M1188 956q0 40-28 68l-136 136q-28 28-68 28t-68-28L594 866l-294 294q-28 28-68 28t-68-28L28 1024Q0 996 0 956t28-68l294-294L28 300Q0 272 0 232t28-68L164 28q28-28 68-28t68 28l294 294L888 28q28-28 68-28t68 28l136 136q28 28 28 68t-28 68L866 594l294 294q28 28 28 68z"
+                                fill="rgba(226, 241, 236, 0.85)" />
+                            </svg>
+                        </a>
+                        {{ range sort .Site.Menus.main }}
+                            <li>
+                                <a class="nav__item" href="{{ .URL }}">{{ .Name }}</a>
+                            </li>
+                        {{ end }}
+                        <a class="nav__logo mobile" href="index.html">
+                            <img class="logo" src="/images/logo-obj.svg" alt="Logo">
+                        </a>
+                    </div>
                     {{ end }}
-
-                    {{ if .Site.Menus.icon }}
-                        <ul class="nav navbar-nav navbar-right">
-                            {{ range sort .Site.Menus.icon }}
-                                <li class="navbar-icon"><a href="{{ .URL }}"><i class="fa fa-{{ .Name }}"></i></a></li>
-                            {{ end }}
-                        </ul>
-                    {{ end }}
-
+                <div class="nav__list-right">
+                    <div class="page__overlay"></div>
                 </div>
-
-            </div>
-
-        </nav>
+        
+                </ul>
+            </nav>
+        </header>

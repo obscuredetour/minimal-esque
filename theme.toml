@@ -1,12 +1,15 @@
-name = "Minimal"
+name = "Minimal-esque"
 license = "MIT"
-licenselink = "https://github.com/calintat/minimal/blob/master/LICENSE.md"
+licenselink = "https://github.com/obscuredetour/minimal-esque/blob/master/LICENSE.md"
 description = "Personal blog theme powered by Hugo"
-homepage = "http://github.com/calintat/minimal/"
+homepage = "http://github.com/obscuredetour/minimal-esque/"
 tags = ["blog", "minimal", "personal", "responsive"]
 features = ["responsive"]
 min_version = "0.24.1"
 
-[author]
+[author.calin]
   name = "Calin Tataru"
   homepage = "https://calintat.github.io/"
+[author.jeffrey]
+  name = "Jeffrey Summers"
+  homepage = "https://www.jeffreysummers.me/"

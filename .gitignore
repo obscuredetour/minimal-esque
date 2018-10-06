@@ -1,1 +1,5 @@
 /.vscode
+.sass-cache/
+*.css.map
+# KDE Dolphin file
+*.directory 
