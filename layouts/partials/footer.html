@@ -1,11 +1,12 @@
 <footer>
 
-    <p class="copyright">2018 {{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io) and a modified version of [Minimal](https://github.com/calintat/minimal) called [minimal-esque](https://github.com/obscuredetour/minimal-esque)" | markdownify }}</p>
+    <p class="copyright">2018 {{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io) and [Minimal-esque](https://github.com/obscuredetour/minimal-esque) a heavily modified version of [Minimal](https://github.com/calintat/minimal) made with ❤️ by [yours truly](https://www.jeffreysummers.me)." | markdownify }}</p>
 
 </footer>
 
 <script async>
-    
+    // This is the page duty & responsible for the navigation
+    // Why is this not in a seperate js file? Initially, Hugo was giving me errors when attempting it this way.
     (pageDuty => {
         
         const sideNav = document.getElementById('sideNav');
@@ -32,7 +33,7 @@
             });
         }
 
-        // hide h4 'related' if nothing exists
+        // hide h4 'related' if no related posts found
         if (relatedElement.childElementCount == 0) {
             h4RelatedHeader.classList.toggle('hidden');
         }

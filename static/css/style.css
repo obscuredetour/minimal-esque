@@ -870,6 +870,7 @@ footer, footer p {
   color: #707875; }
 
 footer p {
+  font-size: 95%;
   padding: 2rem 0; }
 
 @media (min-width: 795px) {

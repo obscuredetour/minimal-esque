@@ -7,7 +7,7 @@ googleAnalytics = ""
 
 [params]
     author = "Jeffrey Summers"
-    description = "Personal blog theme powered by Hugo"
+    description = "Personal blog theme powered by Hugo & a modified Minimal theme"
     githubUsername = "#"
     accent = "#318c63"
     showBorder = true
@@ -27,6 +27,7 @@ googleAnalytics = ""
     name = "Posts"
     weight = 2
 
+# not used - keeping as reference for future changes
 # [[menu.main]]
 #     url = "/project/"
 #     name = "Projects"

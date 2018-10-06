@@ -1,7 +1,7 @@
 name = "Minimal-esque"
 license = "MIT"
 licenselink = "https://github.com/obscuredetour/minimal-esque/blob/master/LICENSE.md"
-description = "Personal blog theme powered by Hugo"
+description = "Personal blog theme powered by Hugo & a modified Minimal theme"
 homepage = "http://github.com/obscuredetour/minimal-esque/"
 tags = ["blog", "minimal", "personal", "responsive"]
 features = ["responsive"]
