@@ -19,7 +19,7 @@ You can install the theme either as a clone or submodule.
 I recommend the latter. From the root of your Hugo site, type the following:
 
 ```
-$ git submodule add https://github.com/obscuredetour/minimal.git themes/minimal-esque
+$ git submodule add https://github.com/obscuredetour/minimal-esque.git themes/minimal-esque
 $ git submodule init
 $ git submodule update
 ```
@@ -43,6 +43,23 @@ $ cp themes/minimal-esque/exampleSite/config.toml .
 Now edit this file and add your own information. Note that some fields can be omitted.
 
 I recommend you use the theme's archetypes so now delete your site's `archetypes/default.md`.
+
+### Post Markdown
+The beginning of each post will include the following at the top of the file
+```
+---
+title: Post title
+date: "2018-09-23"
+time: "8"
+image: "/images/post-image.jpg"
+description: 'A description or snippet that you want displayed on the article card'
+tags: [web-development, design, css]
+---
+```
+If no image is available for the post then omit the `image:` property and replace it with the following line:  `noImage: "no-image"`. This simply adds a `no-image` class to the HTML element.
+
+### Logo
+Replace the `logo-obj.svg` file within the `static` directory with one of your own.
 
 ### Customization
 
