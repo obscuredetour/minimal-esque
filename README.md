@@ -1,7 +1,7 @@
 # Minimal-esque
 #### A dark minimal-esque theme for Hugo
 
-Personal blog theme powered by [Hugo](https://gohugo.io) using the [Minimal](https://github.com/calintat/minimal) theme as a boilerplate.
+Personal blog theme powered by [Hugo](https://gohugo.io) using the [Minimal](https://github.com/calintat/minimal) theme as a boilerplate. Inspired by the [Casper](https://github.com/TryGhost/Casper) Ghost theme.
 A live demo is should hopefully be available soon.
 <!-- A live demo is available [here](https://themes.gohugo.io/theme/minimal/). -->
 
