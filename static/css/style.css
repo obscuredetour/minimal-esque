@@ -441,6 +441,7 @@ ul {
     -webkit-transition: max-height 0.2s ease-in-out; }
 
 .nav-wrapper {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
