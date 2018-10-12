@@ -1,15 +1,20 @@
 # Minimal-esque
-#### A dark minimal-esque theme for Hugo
+A dark minimal-esque blog theme for [Hugo](https://gohugo.io). 
+- Lightweight
+- Dependency free
+- Fully responsive
+- Includes [Simply Navigation](https://github.com/obscuredetour/simply-nav), a dead simple lightweight navigation for all devices built with Flexbox and vanilla JS. [Demo simply navigation](https://obscuredetour.github.io/simply-nav/)
 
-Personal blog theme powered by [Hugo](https://gohugo.io) using the [Minimal](https://github.com/calintat/minimal) theme as a boilerplate. Inspired by the [Casper](https://github.com/TryGhost/Casper) Ghost theme.
-A live demo is should hopefully be available soon.
-<!-- A live demo is available [here](https://themes.gohugo.io/theme/minimal/). -->
+View the theme on my [blog](https://blog.jeffreysummers.me).
+
+This theme was created using the [Minimal](https://github.com/calintat/minimal) blog theme as a boilerplate and was inspired by the Ghost [Casper](https://github.com/TryGhost/Casper) theme.
+
 
 ## Changes
-Here are the most notable changes
+Here are the most notable changes from [Minimal](https://github.com/calintat/minimal)
 * Removal of Bootstrap, jQuery and all their dependencies. Yet still fully responsive.
-* Article card layout built using Flexbox only
-* Navigation mechanics built using only vanilla JavaScript
+* Article card layout built using Flexbox only.
+* Bundled navigation, see [Simply Navigation](https://github.com/obscuredetour/simply-nav).
 
 
 ## Installation
@@ -48,15 +53,21 @@ I recommend you use the theme's archetypes so now delete your site's `archetypes
 The beginning of each post will include the following at the top of the file
 ```
 ---
-title: Post title
-date: "2018-09-23"
+title: "Post title"
+date: 2018-09-23
 time: "8"
 image: "/images/post-image.jpg"
 description: 'A description or snippet that you want displayed on the article card'
-tags: [web-development, design, css]
+tags: ["web-development", "design", "css"]
 ---
 ```
-If no image is available for the post then omit the `image:` property and replace it with the following line:  `noImage: "no-image"`. This simply adds a `no-image` class to the HTML element.
+If no image is available for the post then omit the `image:` property and replace it with the following line:  `noImage: "no-image"`. See the example below. This simply adds a `no-image` class to the HTML element.
+```
+---
+title: "Post title"
+noImage: "no-image"
+...
+```
 
 ### Logo
 Replace the `logo-obj.svg` file within the `static` directory with one of your own.
