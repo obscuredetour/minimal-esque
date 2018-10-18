@@ -660,7 +660,11 @@ ul {
     display: none;
     z-index: -1; } }
 ::selection {
-  background: #4D8B6F; }
+  background: #4D8B6F;
+  color: #fff; }
+
+pre, code {
+  font-size: 90%; }
 
 code {
   background-color: #1d1d1d;
