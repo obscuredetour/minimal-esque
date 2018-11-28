@@ -12,10 +12,10 @@ googleAnalytics = ""
     accent = "#318c63"
     showBorder = true
     backgroundColor = "#1d1d1d"
-    font = "IBM Plex Sans" # should match the name on Google Fonts!
+    font = "Cabin" # should match the name on Google Fonts!
     highlight = true
     highlightStyle = "tomorrow-night"
-    highlightLanguages = ["go", "js", "html", "css", "sass"]
+    highlightLanguages = ["js", "html", "css", "sass"]
 
 [[menu.main]]
     url = "/"
