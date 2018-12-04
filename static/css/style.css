@@ -68,6 +68,8 @@ p {
   max-width: 40rem; }
   p:first-of-type {
     margin-top: 0; }
+  p + ul {
+    margin-top: -0.5rem; }
 
 h1, h2, h3, h4, h5, h6 {
   color: rgba(244, 248, 251, 0.85);
@@ -83,13 +85,13 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
-  margin-top: 1.35rem;
-  margin-bottom: 1.35rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.1px; }
 
 h3 {
   font-size: 1.3rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem; }
   h3.h-alt {
     font-size: 1.1rem;
@@ -102,6 +104,7 @@ h3 {
 
 h4, h5, h6 {
   font-size: 1.05rem;
+  margin-top: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 600; }
   h4.h-alt, h5.h-alt, h6.h-alt {
@@ -333,7 +336,7 @@ ol {
 
 ul {
   list-style-type: disc;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.25rem 0;
   padding-left: 1rem; }
   ul li {
     padding-left: 0.25rem; }
