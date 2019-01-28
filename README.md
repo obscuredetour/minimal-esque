@@ -16,7 +16,6 @@ Here are the most notable changes from [Minimal](https://github.com/calintat/min
 * Article card layout built using Flexbox only.
 * Bundled navigation, see [Simply Navigation](https://github.com/obscuredetour/simply-nav).
 
-
 ## Installation
 
 You can install the theme either as a clone or submodule.
@@ -76,7 +75,7 @@ Replace the `logo-obj.svg` file within the `static` directory with one of your o
 
 Options might be revisted in the future.
 
-<!--## Features
+## Features
 
 You can tweak the look of the theme to suit your needs in a number of ways:
 
@@ -100,7 +99,8 @@ The theme uses [Google Fonts](https://fonts.google.com) to load its font. To cha
 ```toml
 [params]
     font = "Raleway" # should match the name on Google Fonts!
-``` -->
+```
+This feature was recently disabled. To re-enable, remove the comments in `config.toml` as well as `css.html`.
 
 ### Syntax highlighting
 

@@ -1,7 +1,7 @@
 <style>
 
     html body {
-        font-family: '{{ .Site.Params.font }}', -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans','Helvetica Neue', Arial, sans-serif;
+        /* font-family: '{{ .Site.Params.font }}', -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans','Helvetica Neue', Arial, sans-serif; */
         background-color: {{ .Site.Params.backgroundColor | default "#1d1d1d" }};
     }
 
@@ -20,7 +20,8 @@
 {{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . | absURL }}"> {{ end }}
 
 <!-- google fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700">
 
 <!-- highlight.js -->
 {{ if .Site.Params.highlight | default false }} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ .Site.Params.highlightStyle | default "default" }}.min.css"> {{ end }}

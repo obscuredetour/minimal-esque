@@ -2,17 +2,16 @@ baseURL = "http://example.com/"
 languageCode = "en-us"
 title = "Minimal-esque"
 theme = "minimal-esque"
-disqusShortname = "username" # delete this to disable disqus comments
 googleAnalytics = ""
 
 [params]
     author = "Jeffrey Summers"
-    description = "Personal blog theme powered by Hugo & a modified Minimal theme"
+    description = "Personal dark blog theme powered by Hugo & a modified Minimal theme"
     githubUsername = "#"
     accent = "#318c63"
     showBorder = true
     backgroundColor = "#1d1d1d"
-    font = "Cabin" # should match the name on Google Fonts!
+    # font = "Cabin" # should match the name on Google Fonts! Removed b/c I want to control the weights.
     highlight = true
     highlightStyle = "tomorrow-night"
     highlightLanguages = ["js", "html", "css", "sass"]
