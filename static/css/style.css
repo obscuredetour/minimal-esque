@@ -664,7 +664,8 @@ code {
   background-color: #1d1d1d;
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-family: "SFMono-Regular", Consolas, "Source Code Pro", "Fira Code", "Liberation Mono", Menlo, Courier, monospace;
-  color: #CACFCC; }
+  color: #CACFCC;
+  padding: 1px 4px; }
 
 main {
   margin: 4.5rem auto 0 auto;

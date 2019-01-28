@@ -73,7 +73,7 @@ Replace the `logo-obj.svg` file within the `static` directory with one of your o
 
 ### Customization
 
-Options might be revisted in the future.
+Some options are disabled by default. To re-enable, remove the comments in `config.toml` as well as `css.html`.
 
 ## Features
 
