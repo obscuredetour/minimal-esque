@@ -226,6 +226,8 @@ hr {
     .image.fit img {
       width: 100%;
       border-radius: 2px; }
+  .image.-mb-sm {
+    margin-bottom: 0.5rem; }
 
 .accessible-menu {
   position: absolute;
@@ -702,7 +704,8 @@ main {
   margin: 0 auto;
   border-radius: 0;
   background-color: #1d1d1d;
-  background-image: url(/images/arrows-silverthorne-cover.jpg); }
+  background-image: url(/images/arrows-silverthorne-cover.jpg);
+  z-index: 0; }
   .item-full-image.banner-image:after, .item-full-image.banner-image *:before {
     content: "";
     position: absolute;
