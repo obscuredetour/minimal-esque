@@ -14,7 +14,7 @@ googleAnalytics = ""
     # font = "Cabin" # should match the name on Google Fonts! Removed b/c I want to control the weights.
     highlight = true
     highlightStyle = "tomorrow-night"
-    highlightLanguages = ["js", "html", "css", "sass"]
+    highlightLanguages = ["javascript", "html", "css", "scss"]
 
 [[menu.main]]
     url = "/"

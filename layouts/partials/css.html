@@ -4,15 +4,16 @@
         --accent: {{ .Site.Params.accent | default "#318c63" }};
         --border-width: {{ if .Site.Params.showBorder | default false }} 3px {{ else }} 0 {{ end }};
     }
-    /* html body {
+    {{/* html body {
         background-color: {{ .Site.Params.backgroundColor | default "#1d1d1d" }};
         font-family: '{{ .Site.Params.font }}', -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans','Helvetica Neue', Arial, sans-serif;
-    } */
+    } */}}
 
 </style>
 
-<!-- main -->
+{{/* <!-- main --> */}}
 <link rel="stylesheet" type="text/css" href="{{ "css/style.css" | absURL }}">
+{{/*
 <!-- <link rel="stylesheet" href="{{ "css/main.css" | absURL }}"> -->
 
 <!-- custom -->
@@ -20,14 +21,8 @@
 
 <!-- google fonts -->
 <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}"> -->
+*/}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700">
 
-<!-- highlight.js -->
+{{/* <!-- highlight.js --> */}}
 {{ if .Site.Params.highlight | default false }} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/{{ .Site.Params.highlightStyle | default "default" }}.min.css"> {{ end }}
-
-<!-- No longer using bootstrap or font awesome libraries -->
-<!-- bootstrap -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-
-<!-- font awesome -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
