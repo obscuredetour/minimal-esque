@@ -6,7 +6,7 @@ googleAnalytics = ""
 
 [params]
     author = "Jeffrey Summers"
-    description = "Personal dark blog theme powered by Hugo & a modified Minimal theme"
+    description = "Personal dark blog theme for Hugo. Modified from Minimal, inspiration from Casper theme"
     githubUsername = "#"
     accent = "#318c63"
     showBorder = true
@@ -14,7 +14,7 @@ googleAnalytics = ""
     # font = "Cabin" # should match the name on Google Fonts! Removed b/c I want to control the weights.
     highlight = true
     highlightStyle = "tomorrow-night"
-    highlightLanguages = ["javascript", "html", "css", "scss"]
+    highlightLanguages = ["javascript", "xml", "css", "scss"]
 
 [[menu.main]]
     url = "/"
