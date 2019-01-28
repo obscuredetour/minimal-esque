@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.2.2] - 2019-01-28
 ### Changed
+- Updated highlightjs to newest version (9.13.1).
 - Attempted to fix css stylesheet error.
 - Removed background color variable.
 - Removed Google font variable in `config.toml`. To re-enable, remove the comments in `config.toml` as well as `css.html`.

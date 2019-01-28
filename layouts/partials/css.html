@@ -12,18 +12,18 @@
 </style>
 
 <!-- main -->
+<link rel="stylesheet" type="text/css" href="{{ "css/style.css" | absURL }}">
 <!-- <link rel="stylesheet" href="{{ "css/main.css" | absURL }}"> -->
-<link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
 
 <!-- custom -->
-{{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . | absURL }}"> {{ end }}
+{{ range .Site.Params.css }} <link type="text/css" rel="stylesheet" href="{{ . | absURL }}"> {{ end }}
 
 <!-- google fonts -->
 <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}"> -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700">
 
 <!-- highlight.js -->
-{{ if .Site.Params.highlight | default false }} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ .Site.Params.highlightStyle | default "default" }}.min.css"> {{ end }}
+{{ if .Site.Params.highlight | default false }} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/{{ .Site.Params.highlightStyle | default "default" }}.min.css"> {{ end }}
 
 <!-- No longer using bootstrap or font awesome libraries -->
 <!-- bootstrap -->
