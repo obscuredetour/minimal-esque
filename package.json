@@ -1,0 +1,24 @@
+{
+  "name": "minimal-esque",
+  "version": "1.2.1",
+  "description": "A dark minimal-esque blog theme for Hugo.  Lightweight, dependency free, fully responsive. Includes Simply Navigation, a dead simple lightweight navigation for all devices built with Flexbox and vanilla JS. obscuredetour.github.io/simply-nav",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w static/sass/ -o static/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obscuredetour/minimal-esque.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obscuredetour/minimal-esque/issues"
+  },
+  "homepage": "https://github.com/obscuredetour/minimal-esque#readme"
+}
