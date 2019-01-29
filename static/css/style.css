@@ -764,7 +764,8 @@ main {
   margin: 0 auto 2rem auto;
   padding: 1rem 4rem 2rem 4rem;
   min-height: 230px;
-  background: #2a2a2a; }
+  background: #2a2a2a;
+  border-radius: 6px; }
   .item-full-post p:first-of-type {
     margin-top: 2rem; }
   .item-full-post h1, .item-full-post h2, .item-full-post h3, .item-full-post h4, .item-full-post h5, .item-full-post h6 {
